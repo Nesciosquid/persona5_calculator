@@ -132,13 +132,36 @@ const special2Combos = (() => {
 })();
 
 function getElems(personaName: string) {
+    let elemTable = {
+        "wk": {
+            "short": "wk",
+            "long": "Weak",
+            "icon": "Wk.svg"
+        },
+        "rs": {
+            "short": "rs",
+            "long": "Resist",
+            "icon": "Str.svg"
+        },
+        "ab": {
+            "short": "ab",
+            "long": "Absorb",
+            "icon": "Dr.svg"
+        },
+        "rp": {
+            "short": "rp",
+            "long": "Repel",
+            "icon": "Rpl.svg"
+        },
+        "nu": {
+            "short": "nu",
+            "long": "Null",
+            "icon": "Null.svg"
+        }
+    }
     let elems = personaMap[personaName].elems;
     for (let i = 0; i < elems.length; i++) {
-        if (elems[i] == 'wk') elems[i] = 'Weak';
-        else if (elems[i] == 'rs') elems[i] = 'Resist';
-        else if (elems[i] == 'ab') elems[i] = 'Absorb';
-        else if (elems[i] == 'rp') elems[i] = 'Repel';
-        else if (elems[i] == 'nu') elems[i] = 'Null';
+        elems[i] = elemTable[elems[i]];
     }
     return elems;
 }
