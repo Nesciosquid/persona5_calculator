@@ -74,7 +74,38 @@ class PersonaController {
         this.$scope.persona.elems2 = elems.slice(5);
 
         // split the table into 2 for mobile
-        let elemsHeader = ["Physical", "Gun", "Fire", "Ice", "Electric", "Wind", "Psychic", "Nuclear", "Bless", "Curse"];
+        //let elemsHeader = ["Physical", "Gun", "Fire", "Ice", "Electric", "Wind", "Psychic", "Nuclear", "Bless", "Curse"];
+        let elemsHeader = [{
+                name: "Physical",
+                icon: "phys.svg"
+            },{
+                name: "Gun",
+                icon: "gun.svg"
+            },{
+                name: "Fire",
+                icon: "fire.svg"
+            },{
+                name: "Ice",
+                icon: "ice.svg"
+            },{
+                name: "Electric",
+                icon: "elec.svg"
+            },{
+                name: "Wind",
+                icon: "wind.svg"
+            },{
+                name: "Psychic",
+                icon: "psy.svg"
+            },{
+                name: "Nuclear",
+                icon: "nuke.svg"
+            },{
+                name: "Bless",
+                icon: "bless.svg"
+            },{
+                name: "Curse",
+                icon: "curse.svg"
+        }];
         this.$scope.persona.elemsHeader = elemsHeader;
         this.$scope.persona.elemsHeader1 = elemsHeader.slice(0,5);
         this.$scope.persona.elemsHeader2 = elemsHeader.slice(5);

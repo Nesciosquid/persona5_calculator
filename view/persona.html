@@ -26,42 +26,51 @@
     </table>
 
     <h3>Elementals</h3>
-    <table class="ui table unstackable striped mobile-hidden">
+    <table class="ui table unstackable striped mobile-hidden" style="text-align: center">
         <thead>
         <tr>
-            <th ng:repeat="s in persona.elemsHeader">{{s}}</th>
+            <th ng:repeat="s in persona.elemsHeader" style="background-color: dimgrey; padding: 0.25em"><img src="icons/{{s.icon}}" style="width: 50%" alt="{{s.name}}"/></th>
+        </tr>
+        <tr>
+            <th ng:repeat="s in persona.elemsHeader" style="padding: 0.25em">{{s.name}}</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <td ng:repeat="s in persona.elems track by $index" class="{{s}}">{{s}}</td>
+            <td ng:repeat="s in persona.elems track by $index" class="{{s.long}}" style="padding: 0.25em"><img src="icons/{{s.icon}}" style="width: 50%" alt="{{s.long}}"/></td>
         </tr>
         </tbody>
     </table>
 
     <!--split the table into 2 for mobile-->
-    <table class="ui table unstackable striped desktop-hidden">
+    <table class="ui table unstackable striped desktop-hidden" style="text-align: center">
         <thead>
         <tr>
-            <th ng:repeat="s in persona.elemsHeader1">{{s}}</th>
+            <th ng:repeat="s in persona.elemsHeader1" style="background-color: dimgrey; padding: 0.25em"><img src="icons/{{s.icon}}" style="width: 50%" alt="{{s.name}}"/></th>
+        </tr>
+        <tr>
+            <th ng:repeat="s in persona.elemsHeader1" style="padding: 0.25em">{{s.name}}</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <td ng:repeat="s in persona.elems1 track by $index" class="{{s}}">{{s}}</td>
+            <td ng:repeat="s in persona.elems1 track by $index" class="{{s.long}}" style="padding: 0.25em"><img src="icons/{{s.icon}}" style="width: 50%" alt="{{s.long}}"/></td>
         </tr>
         </tbody>
     </table>
 
-    <table class="ui table unstackable striped desktop-hidden">
+    <table class="ui table unstackable striped desktop-hidden" style="text-align: center">
         <thead>
         <tr>
-            <th ng:repeat="s in persona.elemsHeader2">{{s}}</th>
+            <th ng:repeat="s in persona.elemsHeader2" style="background-color: dimgrey; padding: 0.25em"><img src="icons/{{s.icon}}" style="width: 50%" alt="{{s.name}}"/></th>
+        </tr>
+        <tr>
+            <th ng:repeat="s in persona.elemsHeader2" style="padding: 0.25em">{{s.name}}</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <td ng:repeat="s in persona.elems2 track by $index" class="{{s}}">{{s}}</td>
+            <td ng:repeat="s in persona.elems2 track by $index" class="{{s.long}}" style="padding: 0.25em"><img src="icons/{{s.icon}}" style="width: 50%" alt="{{s.long}}"/></td>
         </tr>
         </tbody>
     </table>
